@@ -1,0 +1,189 @@
+html, body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    /* cursor: url('https://cur.cursors-4u.net/others/oth-5/oth509.ani'), auto; */
+}
+
+html {
+    background-image: url(img/room.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: monospace;
+}
+
+.toDos {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 5px 1px rgba(51, 53, 51, .7);
+    margin: 25px 35px;
+    font-family: monospace;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#flex {
+    display: grid;
+    grid-template-columns: [col0] 80% [col1] 20% [col2];
+    grid-template-rows: [row0] 50% [row1] 50% [row2];
+    gap: 10px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 365px;
+    box-shadow: 5px 5px 5px 1px rgba(51, 53, 51, .6);
+}
+
+#inputTitle {
+    grid-column: col0 / col1;
+    grid-row: row0 / row1;
+    width: 250px;
+    height: 46px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-family: monospace;
+}
+
+#inputField {
+    grid-column: col0 / col1;
+    grid-row: row1 / row2;
+    width: 250px;
+    height: 46px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-family: monospace;
+}
+
+input::placeholder{
+    opacity: 0.5;
+    font-style: italic;
+}
+
+#addToDo {
+    grid-column: col1 / col2;
+    grid-row: row0 / row2;
+    justify-self: center;
+    align-self: center;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: #403D39;
+    color: white;
+    font-size: 30px;
+    border-radius: 100px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.postIt_style {
+    min-width: 200px;
+    min-height: 150px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px 1px rgba(51, 53, 51, .4);
+    display: grid;
+    grid-template-columns: [col0] 10% [col1] 75% [col2] 15% [col3];
+    grid-template-rows: [row0] 20% [row1] 20% [row2] 30% [row3] 20% [row4];
+    row-gap: 5px;
+}
+
+.title_style{
+    grid-column: col0 / col2;
+    grid-row: row0 / row1;
+    justify-self: start;
+    align-self: start;
+    margin: 0;
+    font-size: 24px;
+    color: #495057;
+}
+
+.para_style {
+    grid-column: col1 / col3;
+    grid-row: row2 / row3;
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+    font-size: 20px;
+    color: #495057;
+}
+.checkB_style {
+    grid-column: col0 / col1;
+    grid-row: row2 / row3;
+    justify-self: center;
+    align-self: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    font-style: italic;
+    color: #6c757d;
+}
+
+.date_style {
+    grid-column: col0 / col2;
+    grid-row: row1 / row2;
+    justify-self: start;
+    align-self: start;
+    height: 16px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #6c757d;
+    border-radius: 10px;
+    text-align: center;
+}
+/* Edit Task */
+
+/* .editInput_style {
+    display: none;
+}
+
+.postIt_style.editMode_style > .editInput_style {
+    display: block;
+    width: 50px;
+    height: 20px;
+}
+
+.postIt_style.editMode_style > .para_style {
+    display: none;
+} */
+
+/* .editButton_style {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: red;
+} */
+
+.bin_style {
+    grid-column: col2 / col3;
+    grid-row: row3 / row4;
+    justify-self: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: #29e4e8;
+    background-image: url(img/bin.png);
+    filter: invert(100%);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/others/oth-5/oth509.ani), url(https://cur.cursors-4u.net/others/oth-5/oth509.png), auto !important;} /* End https://www.cursors-4u.com */
